@@ -44,11 +44,21 @@
 		<br>
 		<label class="txt5">Telefone:</label>
 		<br>
-		<input type="tel" name="telefone" placeholder="(11) 99999-9999" class="i">
+		<input type="tel" name="telefone" placeholder="(11) 99999-9999" maxlength="15" class="i">
+        <br>
+		<br>
+		<br>
+		<br>
+		<label class="txt6">CPF:</label>
+		<br>
+		<input type="text" name="cpf" placeholder="000.000.000-00" maxlength="14" class="i">
         <br>
         <br>
 		<input type="submit" class="b"></input>
 	</div>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <br>

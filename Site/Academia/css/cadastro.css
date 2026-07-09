@@ -8,7 +8,7 @@
     position: relative;
     background-color: #41423e;
     top: 50px;
-    height: 600px;
+    height: 820px;
     width: 350px;
     border-radius: 20px;
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
@@ -46,6 +46,13 @@
     position: relative;
     font-size: 22px;
     right: 75px;
+    top: 40px;
+}
+
+.txt6{
+    position: relative;
+    font-size: 22px;
+    right: 92px;
     top: 40px;
 }
 
