@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="icon" href="img/icone.png">
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body style="background: #524f4f;">
+<center>
+    <h1 class="titulo">Cadastro</h1>
+    <br>
+    <br>
+    <br>
+    <div id="fundo">
+        <label class="t0">Nome Completo:</label>
+        <br>
+        <input type="text" name="nome" placeholder="Digite seu Nome" class="i" required>
+        <br>
+        <br>
+        <br>
+        <label class="t1">Usuário:</label>
+        <br>
+        <input type="text" name="usuario" placeholder="Digite seu Usuário" class="i" required>
+        <br>
+        <br>
+        <br>
+        <label class="t2">Email:</label>
+        <br>
+        <input type="email" name="email" placeholder="Digite seu Email" class="i" required>
+        <br>
+        <br>
+        <br>
+        <label class="t3">Senha:</label>
+        <br>
+        <input type="password" name="senha" placeholder="Digite sua Senha" class="i" required>
+        <br>
+        <br>
+        <br>
+        <label class="t4">Idade:</label>
+        <br>
+        <input type="number" name="idade" placeholder="Digite sua Idade" class="i" required>
+        <br>
+        <br>
+        <br>
+        <label class="t5">Telefone:</label>
+        <br>
+        <input type="tel" name="telefone" id="telefone" placeholder="(11) 99999-9999" class="i" maxlength="15" required>
+        <br>
+        <br>
+        <br>
+        <label class="t6">CPF:</label>
+        <br>
+        <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" class="i" maxlength="14" required>
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Cadastrar" class="b">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <label>Já Criou sua Conta? Faça o <a href="index.php" style="color: blue;">Login!</a></label>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+
+
+</center>
+
+<script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js"></script>
+
+<script>
+const telefone = document.getElementById("telefone");
+const cpf = document.getElementById("cpf");
+
+Inputmask("(99) 99999-9999").mask(telefone);
+Inputmask("999.999.999-99").mask(cpf);
+</script>
+
+</body>
+</html>

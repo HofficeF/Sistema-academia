@@ -26,6 +26,16 @@
     <br>
     <br>
     <input type="submit" value="Entrar" class="b">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <label>Não tem uma Conta? <a href="cadastro.php" style="color: blue;">Cadastre-se!</a></label>
 
 
     </div>
