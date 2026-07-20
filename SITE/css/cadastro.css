@@ -100,6 +100,7 @@
 }
 .b:hover{
     transform: scale(1.1);
-    color: white;
+    background: white;
+    color: #00d92f;
     transition: 0.2s ease;
 }
