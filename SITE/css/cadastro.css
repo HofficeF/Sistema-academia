@@ -14,7 +14,7 @@
 
 #fundo{
     background: #3d3b3b;
-    height: 1020px;
+    height: 1250px;
     width: 380px;
     position: relative;
     top: 30px;
@@ -53,7 +53,7 @@
 .t4{
     font-size: 32px;
     position: relative;
-    right: 108px;
+    right: 15px;
     top: 30px;
 }
 
@@ -68,6 +68,20 @@
     font-size: 32px;
     position: relative;
     right: 115px;
+    top: 30px;
+}
+
+.t7{
+    font-size: 32px;
+    position: relative;
+    right: 82px;
+    top: 30px;
+}
+
+.t8{
+    font-size: 32px;
+    position: relative;
+    right: 74px;
     top: 30px;
 }
 

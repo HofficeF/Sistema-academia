@@ -33,13 +33,13 @@
         <br>
         <label class="t3">Senha:</label>
         <br>
-        <input type="password" name="senha" placeholder="Digite sua Senha" class="i" required>
+        <input type="password" name="senha" placeholder="Digite sua Senha" class="i" maxlength="8" required>
         <br>
         <br>
         <br>
-        <label class="t4">Idade:</label>
+        <label class="t4">Data de Nascimento:</label>
         <br>
-        <input type="number" name="idade" placeholder="Digite sua Idade" class="i" required>
+        <input type="date" name="data" class="i"  max="<?php echo date('Y-m-d'); ?>" required>
         <br>
         <br>
         <br>
@@ -52,6 +52,18 @@
         <label class="t6">CPF:</label>
         <br>
         <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" class="i" maxlength="14" required>
+        <br>
+        <br>
+        <br>
+        <label class="t7">Peso (kg):</label>
+        <br>
+        <input type="number" name="peso" id="peso" placeholder="Ex.: 72.5" min="20" max="500" step="0.1" class="i"  required>
+        <br>
+        <br>
+        <br>
+        <label class="t8">Altura (m):</label>
+        <br>
+        <input type="number" name="altura" id="altura" placeholder="Ex.: 1.75" min="0.50" max="2.50" step="0.01" class="i"  required>
         <br>
         <br>
         <br>
@@ -69,6 +81,10 @@
     </div>
     <br>
     <br>
+    <br>
+        <br>
+    <br>
+        <br>
     <br>
 
 
