@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>Cadastro</title>
     <link rel="icon" href="img/icone.png">
     <link rel="stylesheet" href="css/cadastro.css">
 </head>
