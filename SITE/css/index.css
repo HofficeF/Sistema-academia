@@ -25,7 +25,7 @@
 .t1{
     font-size: 32px;
     position: relative;
-    right: 95px;
+    right: 50px;
     top: 30px;
 }
 
@@ -68,4 +68,9 @@
     background: white;
     color: #00d92f;
     transition: 0.2s ease;
+}
+
+.mensagem{
+    position: relative;
+    top: 70px;
 }

@@ -118,3 +118,8 @@
     color: #00d92f;
     transition: 0.2s ease;
 }
+
+.mensagem{
+    position: relative;
+    top: 75px;
+}
