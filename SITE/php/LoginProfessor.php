@@ -1,55 +1,56 @@
 <?php
     require_once "../php/conexao.php";
 
-    $mensagem = "";
+        $mensagem = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $usuario = $_POST["usuario"];
         $senha = $_POST["senha"];
-        
-        $sql="select * from tb_users where (nome_user = ? or email = ?) and senha = ? and tipo = 'aluno'";
 
-        $stmt = $conn->prepare($sql);
+    $sql = "select * from tb_users where nome_user = ? and senha = ? and tipo = 'professor'";
 
-        $stmt->bind_param("sss", $usuario, $usuario, $senha);
-        $stmt->execute();
+    $stmt = $conn->prepare($sql);
 
-        $resultado = $stmt->get_result();
-        if ($resultado->num_rows > 0){
-            header("location: TelaUser.php");
-        } else {
-            $mensagem = "<span style='color:#f7070f;'>Usuário ou Senha incorretos!</span>";
-        }
+    $stmt->bind_param("ss", $usuario, $senha);
+    $stmt->execute();
+
+    $resultado = $stmt->get_result();
+    if ($resultado->num_rows > 0){
+        header("location: TelaProfessor.php");
+    } else {
+        $mensagem = "<span style='color:#f7070f;'>Usuário ou Senha incorretos!</span>";
+    }
 
         $stmt->close();
         $conn->close();
+
     }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>Professor</title>
     <link rel="icon" href="../img/icone.png">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/LoginProfessor.css">
 </head>
 <body style="background: #524f4f;">
 <center>
 
-<a href="LoginProfessor.php" class="bp">
-    Entrar como Professor
+<a href="index.php" class="bp">
+    Voltar
 </a>
 
 <form method="POST">
-    <h1 class="titulo">Login</h1>
+    <h1 class="titulo">Professor</h1>
     <br>
     <br>
     <br>
     <div id="fundo">
-        <label class="t1">Usuário/Email:</label>
+        <label class="t1">Usuário:</label>
         <br>
-        <input type="text" name="usuario" placeholder="Digite seu Usuário ou Email" class="i">
+        <input type="text" name="usuario" placeholder="Digite seu Usuário" class="i">
         <br>
         <br>
         <br>
@@ -70,7 +71,6 @@
         <br>
         <br>
         <br>
-        <label>Não tem uma Conta? <a href="cadastro.php" style="color: blue;">Cadastre-se!</a></label>
     </div>
 </form>
 </center>

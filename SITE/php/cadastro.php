@@ -14,14 +14,15 @@
         $cpf = $_POST["cpf"];
         $peso = $_POST["peso"];
         $altura = $_POST["altura"];
+        $tipo = "aluno";
 
-        $sql = "insert into tb_users (nome_completo, nome_user, email, senha, data, telefone, cpf, peso, altura)
-        values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "insert into tb_users (nome_completo, nome_user, email, senha, data, telefone, cpf, peso, altura, tipo)
+        values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         $stmt = $conn->prepare($sql);
 
         $stmt->bind_param(
-            "sssssssdd", $nome, $usuario, $email, $senha, $data, $telefone, $cpf, $peso, $altura
+            "sssssssdds", $nome, $usuario, $email, $senha, $data, $telefone, $cpf, $peso, $altura, $tipo
         );
 
         if ($stmt->execute()) {
@@ -77,7 +78,7 @@
         <br>
         <label class="t4">Data de Nascimento:</label>
         <br>
-        <input type="date" name="data" class="i"  max="<?php echo date('Y-m-d'); ?>" required>
+        <input type="date" name="data" class="i"  max="<?php echo date('Y-m-d'); ?>" min="1936-01-01"required>
         <br>
         <br>
         <br>
@@ -125,9 +126,6 @@
     <br>
     <br>
     <br>
-
-
-
 </form>
 </center>
 

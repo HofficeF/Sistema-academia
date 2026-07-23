@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 21/07/2026 às 20:38
+-- Tempo de geração: 23/07/2026 às 21:53
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -41,12 +41,18 @@ CREATE TABLE IF NOT EXISTS `tb_users` (
   `cpf` varchar(14) NOT NULL,
   `peso` decimal(5,2) NOT NULL,
   `altura` decimal(4,2) NOT NULL,
+  `tipo` varchar(20) NOT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- RELACIONAMENTOS PARA TABELAS `tb_users`:
+-- Despejando dados para a tabela `tb_users`
 --
+
+INSERT INTO `tb_users` (`id_user`, `nome_completo`, `nome_user`, `email`, `senha`, `data`, `telefone`, `cpf`, `peso`, `altura`, `tipo`) VALUES
+(1, 'felipinho', 'felpsss', 'carlos.carlos@carlos.com', '12312124', '1900-12-12', '(99) 99999-9999', '999.999.999-99', 56.00, 1.40, 'aluno'),
+(2, 'admin', '213', 'carlos.carlos@carlos.com', 'asda', '1936-01-01', '(99) 99999-9999', '999.999.999-99', 80.00, 2.00, 'aluno'),
+(3, 'blabla', 'professor', 'professor@professor.com', '123', '2000-01-01', '(22) 22222-2222', '666.666.666-66', 90.00, 1.90, 'professor');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
